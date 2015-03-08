@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+body{
+  font-size: 20px;
+}
+
+div{
+  display: block;
+}
+
+.wrap {
+  width: 100%;
+  min-width: 980px;
+  height: auto;
+  overflow: hidden;
+}
+
+section {
+  margin:0px;
+  padding:0px;
+}
+
+#Top .contents-area {
+  height:900px;
+  background-color:#ffffff;
+  position:relative;
+}
+
+#Header{
+  width:100%;
+  height:100%;
+  display:table;
+}
+#Header h1{
+  display:table-cell;
+  text-align:center;
+  vertical-align:middle;
+  font-size:84px;
+  font-family:Helvetica, Arial;
+}
+
+#About .contents-area {
+  height:900px;
+  background-color:#ecf0f1;
+  position:relative;
+}
+
+#Menu .contents-area {
+  height:900px;
+  background-color:#bdc3c7;
+}                      
+
+#Contact .contents-area {
+  height:900px;
+  background-color:#95a5a6;
+}                     
+
+
+
+a {
+  color: #666;
+  text-decoration: none;
+  font-family:Helvetica;
+}
+
+a:hover {
+  color:#39f;
+}
+li .scroll-btn{
+  list-style: none;
+}
+.side-menu{
+  display: none;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  padding: 130px 15px 15px;
+  background: #ddd;
+  line-height: 42px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 80%;
+  z-index: 2
+}
+
+#menuButton {
+  display: block;
+  width: 42px;
+  height:42px;
+  position: fixed;
+  top: 50px;
+  right: 70px;
+  z-index: 3;
+}
+#menuButton span {
+  display: block;
+  background: #666;
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  left: 9px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+#menuButton span:first-child {
+  top: 9px;
+}
+#menuButton span:nth-child(2) {
+  margin-top: -1px;
+  top: 50%;
+}
+#menuButton span:last-child {
+  bottom: 7px;
+}
+#menuButton.active span:first-child {
+  -webkit-transform: translateY(14px) rotate(45deg);
+  -moz-transform: translateY(14px) rotate(45deg);
+  -ms-transform: translateY(14px) rotate(45deg);
+  transform: translateY(14px) rotate(45deg);
+}
+#menuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+#menuButton.active span:last-child {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}

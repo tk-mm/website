@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>UZUYH.com</title>
+    <meta name="description" content="uzuyh.com">
+    <!-- styleをreset -->
+    <link rel="stylesheet" href="reset.css" type="text/css "media="all" />
+    <!-- メインCSS -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="btn.js"></script>
+    <script>
+      $(function(){
+
+        $('a[href^=#]').click(function() {
+          var speed = 400;
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <a id="menuButton">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <section id="Top">
+        <div class="contents-area">
+          <div id="1">
+            <div id="Header" class="top" style="height:961px;">
+              <h1>UZUYH.com</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="About">
+        <div class="contents-area">
+          <div id="2">
+            <h1>ABOUT</h1>
+          </div>
+        </div>
+      </section>
+      <section id="Menu">
+        <div class="contents-area">
+          <div id="3">
+            <h1>MENU</h1>
+          </div>
+        </div>
+      </section>          
+      <section id="Contact">
+        <div class="contents-area">
+          <div id="4">
+            <h1>CONTACT</h1>
+          </div>
+        </div>
+      </section>         
+      <div class="side-menu">
+        <nav>
+          <ul>
+            <li><a href="#1">TOP</a></li>
+            <li><a href="#2">ABOUT</a></li>
+            <li><a href="#3">MENU</a></li>
+            <li><a href="#4">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
